@@ -1,1 +1,17 @@
-
+Description
+Download this image file and find the flag (the flag format is "picoCTF{something}")
+You are prompted with downloading an 'image file'.
+The file name is 'drawing.flag.svg'.
+Check file with 'file' command in terminal: 
+  % file drawing.flag.svg  -- result: SVG Scalable Vector Graphics image
+Read human readable characters within the file code with "strings" command in CLI:
+  % strings drawing.flag.svg -- result: there are 8 line of text contain part of a string that make up the picoCTF flag format:
+      id="tspan3748">p </tspan>
+      id="tspan3754">i </tspan>
+      id="tspan3756">c </tspan>
+      id="tspan3758">o </tspan>
+      id="tspan3760">C </tspan>
+      id="tspan3762">T </tspan>
+      id="tspan3764">F { 3 n h 4 n </tspan><tspan
+      id="tspan3752">c 3 d _ 2 4 3 7 4 6 7 5 }</tspan>
+It's easy to get rid of breaks and spaces and to retrieve the flag: picoCTF{3nh4nc3d_24374675}
