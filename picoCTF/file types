@@ -1,5 +1,27 @@
 Description
+
 This file was found among some files marked confidential but my pdf reader cannot read it, maybe yours can.
 Downloaded file name is Flag.pdf
 Opening it with any PDF editor returns an error. 
-Check
+Check file type with 'file' command in the Terminal: 
+  flag.pdf: shell archive text
+Check permissions before running with "ls -la" command:
+  -rw-r----- Flag.pdf
+Add execute permission with the 'chmod' command:
+  -rwxr-xr-x@ Flag.pdf
+Running the shell script with 'sh' command:
+  success
+Updating current directory with 'ls' command:
+  a new file named 'flag' was created.
+Checking its file type with 'file' command:
+  it's a 'current ar archive'
+Decompressing with 'tar -xf' command:
+  Error: flag: Refusing to overwrite archive
+Checking permissions again:
+  -rw-r--r-- flag (lacks write permissions for group and other and execute for everyone)
+Chmodding:
+  -rwxr-xr-x flag
+Decompressing with 'tar' again:
+  same error: Refusing to overwrite archive
+
+>>>>>>>>>>>>>> task incomplete <<<<<<<<<<<<<<<<<<<
